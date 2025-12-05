@@ -1,0 +1,93 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}{% endblock %} | Harrison Ogden-Carr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="google-site-verification" content="Hy_-qTsCbGn-EBlPlWBxPMRC0sG0MFT_gV5GyVFurQ8" />
+
+  <!-- ✅ SEO & Social Meta Tags -->
+  <meta name="description" content="Portfolio of Harrison Ogden-Carr, AWS Certified ML Engineer showcasing machine learning demos, Django apps, and data science projects.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://www.harrisonogdencarr.com/">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.harrisonogdencarr.com/">
+  <meta property="og:title" content="Harrison Ogden-Carr | ML Engineer Portfolio">
+  <meta property="og:description" content="Explore machine learning demos, Django web apps, and Harrison Ogden-Carr's ML journey.">
+  <meta property="og:image" content="https://www.harrisonogdencarr.com/static/projects/images/og-preview.jpg">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://www.harrisonogdencarr.com/">
+  <meta name="twitter:title" content="Harrison Ogden-Carr | ML Engineer Portfolio">
+  <meta name="twitter:description" content="AWS Certified ML Engineer portfolio featuring scalable ML demos and Django projects.">
+  <meta name="twitter:image" content="https://www.harrisonogdencarr.com/static/projects/images/og-preview.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="{% static 'projects/images/favicon.png' %}">
+  <link rel="shortcut icon" type="image/png" href="{% static 'projects/images/favicon.png' %}">
+  <link rel="manifest" href="{% static 'projects/images/site.webmanifest' %}">
+
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto&family=Rajdhani:wght@700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="{% static 'projects/theme/themes.css' %}">
+  <link rel="stylesheet" href="{% static 'projects/style/style.css' %}">
+
+
+</head>
+
+<body style="font-family: 'Roboto', sans-serif; background-color: var(--futuristic-bg); color: var(--futuristic-text);">
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand fw-bold footer-brand" href="/">Harrison Ogden-Carr</a>
+
+      <!-- Mobile toggler -->
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div id="mainNavbar" class="collapse navbar-collapse">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="/#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="/#interactive-projects">Projects</a></li>
+          <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- Hero Section -->
+  <section class="hero-banner text-center py-5"
+           style="background-image: url('{% static 'projects/images/ai.jpg' %}');">
+    <h1 class="hero-heading">Welcome to My Portfolio</h1>
+    <p class="hero-subheading">Building For Machine Learning & Data Science</p>
+  </section>
+
+  <!-- Main Content -->
+  <main>
+    {% block content %}{% endblock %}
+  </main>
+  <!-- Footer -->
+  <footer class="custom-footer text-center mt-5">
+    <p class="mb-1 footer-brand">© 2025 Harrison Ogden-Carr</p>
+    <p class="small mb-0 footer-links">
+      Built with Django & Bootstrap |
+      <a href="https://github.com/HarrisonOC-Creator" target="_blank">GitHub</a> |
+      <a href="{% url 'contact' %}">Contact</a>
+    </p>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

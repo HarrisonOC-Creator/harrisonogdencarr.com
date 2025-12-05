@@ -1,0 +1,8 @@
+Django>=4.2,<5.0
+gunicorn
+whitenoise
+dj-database-url
+Pillow
+torch==2.9.1          # CPU build only, no CUDA
+torchvision==0.24.1   # CPU build only
+numpy==2.3.5
