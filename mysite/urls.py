@@ -41,7 +41,7 @@ urlpatterns = [
     path("projects/<slug:slug>/", views.project_detail, name="project_detail"),
     path("contact/", views.contact, name="contact"),
     path("demo/api/", views.demo_api, name="demo_api"),  # AJAX endpoint
-     path("dog-breed-classifier/", views.dog_breed_demo, name="dog_breed_classifier"),
+    path("dog-breed-classifier/", views.dog_breed_demo, name="dog_breed_classifier"),
     path('sitemap.xml', sitemap, {'sitemaps': sitemaps_dict}, name='sitemap'),
     path("BingSiteAuth.xml", bing_verification),
     path("favicon.ico", RedirectView.as_view(url="/static/projects/images/favicon.png")),
